@@ -23,7 +23,7 @@ git clone https://github.com/cruskit/vagrant-ghost.git
 
 # Configure
 
-You will need to configure some environment variables to customize your blog.
+You will need to configure some environment variables to customize the creation process.
 These are:
 
 * `DO_AUTH_TOKEN` : the Authorisation Token to use with Digital Ocean.
@@ -34,7 +34,7 @@ Log into the Digital Ocean console, use "Apps & Apis" and generate a Personal Ac
 If you are feeling lazy, you may want to just create a file, for example `setenv.sh` with contents:
 
 ```
-export ="my token"
+export DO_AUTH_TOKEN="my token"
 export PRIVATE_KEY_PATH="~/.ssh/private_key_name"
 export TARGET_HOST_NAME="myhostname"
 ```
@@ -51,9 +51,13 @@ vagrant up --provider=digital_ocean
 This will create you a new Digital Ocean Droplet (virtual machine) and install and configure Ghost & nginx.
 
 Once this completes you can access Ghost at:
+
 * https://<droplet_ip/
+
 You will need to login and create an admin account at:
+
 * https://<droplet_ip/ghost
+
 Note that the server is configured with a self signed certificate so you'll need to click
 through the certificate warning in your browser.
 
