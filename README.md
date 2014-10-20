@@ -6,9 +6,8 @@ fronted by [nginx](http://nginx.org) as a reverse proxy ready for your blogging 
 
 Note that this is currently only configured to work with
 [Digital Ocean](https://www.digitalocean.com). I'll add other providers when I get the time...
-
-If you haven't got a Digital Ocean account,
- [sign up here to get a $10 credit on your account](https://www.digitalocean.com/?refcode=5edce6a2efb4)
+If you haven't got a Digital Ocean account, you can
+ [sign up here to get a $10 credit](https://www.digitalocean.com/?refcode=5edce6a2efb4)
  to test it out.
 # Install
 
@@ -77,7 +76,7 @@ some properly signed certificates for your domain:
 
 ### Managing nginx & ghost
 
-Ghost and nginx are configure to be managed by systemd. They are configured for automatic restart on boot.
+Ghost and nginx are configured to be managed by systemd. They are configured for automatic restart on boot.
 
 If you make a configuration change you can restart them by:
 
