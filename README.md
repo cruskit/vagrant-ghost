@@ -102,6 +102,9 @@ some properly signed certificates for your domain:
 * /etc/nginx/certs/server.crt;
 * /etc/nginx/certs/server.key;
 
+If you have valid certificates, put them in the vagrant directory /certificates (call them
+  server.crt and server.key) and the provisioner will copy them to the above location.
+
 ### Managing nginx & ghost
 
 Ghost and nginx are configured to be managed by systemd. They are configured for automatic restart on boot.
