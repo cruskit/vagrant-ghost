@@ -5,9 +5,16 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box = "dummy"
+  config.vm.box = "opscode-centos7"
   config.vm.hostname = ENV['TARGET_HOST_NAME']
   config.ssh.private_key_path = ENV['PRIVATE_KEY_PATH']
+
+  config.vm.provider :virtualbox do |vb, override|
+
+    override.vm.network "forwarded_port", guest: 80, host: 8080, protocol: 'tcp'
+    override.vm.network "forwarded_port", guest: 443, host: 8443, protocol: 'tcp'
+
+  end
 
   config.vm.provider :digital_ocean do |digitalocean, override|
 

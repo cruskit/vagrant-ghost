@@ -6,6 +6,7 @@ fronted by [nginx](http://nginx.org) as a reverse proxy ready for your blogging 
 
 Note that this is currently only configured to work with:
 
+* VirtualBox, and
 * [Digital Ocean](https://www.digitalocean.com), and
 * [Amazon Web Services](https://aws.amazon.com)
 
@@ -81,6 +82,9 @@ Once this completes you can access Ghost at:
 
 * https://<host_ip/
 
+(Note that if using the VirtualBox provider, you will need to use https://localhost:8443/ as forwarding
+  ports under 1024 doesn't work on the Mac, so it is set to forward 8443->443)
+
 You will need to login and create an admin account at:
 
 * https://<host_ip/ghost
@@ -124,8 +128,6 @@ Any themes provided under: /vagrant/ghost/themes/ will automatically be installe
 # List of potential future enhancements
 
 These are things that are on the list for later:
-* automatically copying certs from the /vagrant to the right location
-* support for VirtualBox
-* ghost theme installation as part of instance creation
+
 * nginx log file rotation & archiving / cleanup
 * npm log file rotation & archiving / cleanup
