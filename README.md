@@ -4,10 +4,10 @@ vagrant-ghost
 Uses [Vagrant](http://www.vagrantup.com) to configure [Ghost](https://ghost.org)
 fronted by [nginx](http://nginx.org) as a reverse proxy ready for your blogging pleasure.
 
-Note that this is currently only configured to work with:
+Note that this is currently configured to work with the following providers:
 
-* VirtualBox, and
-* [Digital Ocean](https://www.digitalocean.com), and
+* VirtualBox
+* [Digital Ocean](https://www.digitalocean.com)
 * [Amazon Web Services](https://aws.amazon.com)
 
 # Install
@@ -27,6 +27,10 @@ git clone https://github.com/cruskit/vagrant-ghost.git
 
 You will need to configure some environment variables to customize the creation process.
 These are:
+
+*VirtualBox*
+
+* `PRIVATE_KEY_PATH` : the location of the private key to use with SSH when provisioning & accessing your Digital Ocean droplet.
 
 *Digital Ocean*
 
@@ -51,8 +55,9 @@ don't you'll need to create it. It will need TCP access on ports 22, 80 and 443.
 If you are feeling lazy, you may want to just create a file, for example `setenv.sh` with contents:
 
 ```
-export DO_AUTH_TOKEN="my token"
 export PRIVATE_KEY_PATH="~/.ssh/private_key_name"
+
+export DO_AUTH_TOKEN="my token"
 export TARGET_HOST_NAME="myhostname"
 
 export AWS_PRIVATE_KEY_PATH="~/.ssh/private_key_name.pem"
