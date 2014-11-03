@@ -117,6 +117,10 @@ If you make a configuration change you can restart them by:
 Note that there are also corresponding commands for stop/start/status. nginx also supports a reload
 command if you have just modified the configuration.
 
+# Ghost Themes
+
+Any themes provided under: /vagrant/ghost/themes/ will automatically be installed in Ghost
+
 # List of potential future enhancements
 
 These are things that are on the list for later:

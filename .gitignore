@@ -1,2 +1,4 @@
 setenv.sh
 certificates
+ghost/themes
+ghost/images
